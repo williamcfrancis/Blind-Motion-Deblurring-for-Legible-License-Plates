@@ -2,6 +2,8 @@
 
 This project uses deep learning techniques to estimate a length and angle parameter for the point-spread function responsible for motion-deblurring of an image. This estimation is achieved by training a deep CNN model on the fast-fourier transformation of the blurred images. By using enough random examples of motion blurred images, the model learns how to estimate any kind of motion blur (upto a certain blur degree), making this approach a truly blind motion deblurring example. Once a length and angle of motion blur is estimated by the model, one can easily deblur the image using Wiener Deconvolution. This technique can have many applications, but we used it specifically for deblurring and making license plates legible. As seen below, the images demonstrate our model in action. With the introduction of some artifacts, the model manages to deblur the images to a point where the license plates are legible.  
 
+Try out our [HuggingFace app](https://williamcfrancis-deep-blind-motion-deblurring.hf.space) for an interactive demo.
+
 <img src="readme_imgs/img1.jpg" width="360px"> <img src="readme_imgs/img1_result.jpg" width="360px">
 
 <img src="readme_imgs/img2.jpg" width="360px"> <img src="readme_imgs/img2_result.jpg" width="360px">
